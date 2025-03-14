@@ -35,11 +35,11 @@
         </thead>
         <tbody>
             <?php
-      $pdo = new PDO('mysql:host=localhost;dbname=crudsever', 'root', null);
-      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      $consulta = $pdo->query("SELECT * FROM crudtable ORDER BY id desc;");
-      while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-        echo "
+            $pdo = new PDO('mysql:host=localhost;dbname=crudsever', 'root', null);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $consulta = $pdo->query("SELECT * FROM crudtable ORDER BY id desc;");
+            while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
+                echo "
           <tr>
             <td>{$linha['id']}</td>
             <td>{$linha['nome']}</td>
@@ -50,8 +50,8 @@
             </td>
           </tr>
         ";
-      }
-      ?>
+            }
+            ?>
         </tbody>
     </table>
 
